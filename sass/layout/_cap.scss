@@ -1,0 +1,77 @@
+.cap {
+    /* background-color: #2F303A; */
+    max-width: 480px;
+    margin: 0 auto;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../images/cap_bg_mob.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 118px;
+    padding-bottom: 118px;
+
+    @include retina {
+        background-image: linear-gradient(rgba(25, 28, 38, 0.2),
+                rgba(25, 28, 38, 0.2)),
+            url(../images/cap_bg_mob_2x.jpg);
+    }
+
+    @include tablet {
+        max-width: 768px;
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+            url(../images/cap_bg_tab.jpg);
+
+        @include retina {
+            background-image: linear-gradient(rgba(25, 28, 38, 0.2),
+                    rgba(25, 28, 38, 0.2)),
+                url(../images/cap_bg_tab_2x.jpg);
+        }
+    }
+
+    @include desktop {
+        max-width: 1600px;
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+            url(../images/cap_bg.jpg);
+        padding-top: 200px;
+        padding-bottom: 200px;
+
+        @include retina {
+            background-image: linear-gradient(rgba(25, 28, 38, 0.2),
+                    rgba(25, 28, 38, 0.2)),
+                url(../images/cap_bg_2x.jpg);
+        }
+    }
+}
+
+.cap__content {
+    justify-content: center;
+    align-items: center;
+}
+
+.cap__title {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.61;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--basic-light-color);
+    max-width: 360px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include desktop {
+        font-size: 44px;
+        line-height: 1.36;
+        max-width: 696px;
+    }
+}
+.btn--cap {
+    min-width: 216px;
+    padding: 10px 32px;
+}

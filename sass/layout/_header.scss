@@ -1,0 +1,259 @@
+.header {
+    border-bottom: 1px solid #ECECEC;
+
+    >.container {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.header__list {
+    display: flex;
+    justify-content: flex-end;
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--accent-color);
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+
+    @include tablet {
+        padding: 26px 0;
+    }
+}
+
+.header__logo--black {
+    color: #000000;
+}
+
+.header__link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--basic-dark-color);
+    position: relative;
+    padding: 32px 0;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.header__current-page {
+    color: var(--accent-color);
+
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: var(--accent-color);
+        border-radius: 2px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+.header__item:not(:last-child) {
+    margin-right: 50px;
+}
+
+
+.contacts__list {
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 10px;
+
+    @include desktop {
+        flex-direction: row;
+    }
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+}
+
+.contacts__link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+    
+    @include desktop {
+        padding: 32px 0;
+        font-size: 14px;
+        line-height: 1.14;
+    }
+}
+
+
+.contacts__icon {
+    fill: currentColor;
+    margin-right: 10px;
+    padding: 0;
+}
+
+.contacts__item:not(:last-child) {
+    @include desktop {
+        margin-right: 50px;
+    }
+}
+
+
+
+.menu-open {
+    margin-left: auto;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    width: 40px;
+    height: 40px;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.menu-open__icon {
+    fill: #000000;
+    background-color: var(--basic-light-color);
+}
+
+.menu-close {
+    display: block;
+    margin-left: auto;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    width: 40px;
+    height: 40px;
+    
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.menu-close__icon {
+    fill: #000000;
+    background-color: var(--basic-light-color);    
+}
+
+.menu {
+    position: fixed;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--basic-light-color);
+    top: 0;
+    padding-top: 10px;
+    padding-bottom: 48px;
+
+    > .container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+        overflow: auto;
+    }
+}
+
+.menu__item:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.menu__link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.175;
+    letter-spacing: 0.02em;
+    color: var(--basic-dark-color);
+}
+
+.menu-tel__link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
+}
+
+.menu-mail__link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: var(--secondary-color);
+}
+
+.menu-contacts-mail__item {
+    margin-top: 32px;
+    margin-bottom: 64px;
+}
+
+
+.soc-med__list {
+    margin-bottom: 48px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.soc-med__item {
+    padding: 0 10px;
+
+    &:not(:last-child) {
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+    &:first-child {
+        padding-left: 0;
+    }
+}
+
+.soc-media__link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
+}

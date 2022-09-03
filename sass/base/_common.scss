@@ -1,0 +1,25 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--basic-dark-color);
+    margin: 0;
+}
+
+.section {
+    padding: 60px 0;
+
+    @include desktop {
+        padding: 94px 0;
+    }
+}
+
+.list {
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
