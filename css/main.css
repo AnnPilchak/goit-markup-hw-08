@@ -500,13 +500,16 @@ input.modal__input:focus {
   width: 40px;
   height: 40px;
 }
-.menu-close:hover, .menu-close:focus {
-  color: var(--accent-color);
-}
 
 .menu-close__icon {
   fill: #000000;
   background-color: var(--basic-light-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-close__icon:hover, .menu-close__icon:focus {
+  fill: var(--accent-color);
 }
 
 .menu {
@@ -518,6 +521,7 @@ input.modal__input:focus {
   top: 0;
   padding-top: 10px;
   padding-bottom: 48px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu > .container {
   display: flex;
@@ -538,6 +542,10 @@ input.modal__input:focus {
   line-height: 1.175;
   letter-spacing: 0.02em;
   color: var(--basic-dark-color);
+}
+
+.menu__link--current {
+  color: var(--accent-color);
 }
 
 .menu-tel__link {
@@ -1156,6 +1164,7 @@ input.modal__input:focus {
 .filt__list {
   display: flex;
   row-gap: 15px;
+  column-gap: 8px;
   flex-direction: row;
   justify-content: center;
 }
